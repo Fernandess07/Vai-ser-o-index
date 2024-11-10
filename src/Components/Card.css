@@ -1,0 +1,107 @@
+/* Card styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.card {
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 482px;
+    height: 350px;
+}
+
+
+.card-image {
+    max-width: 482px;
+    max-height: 300px;
+    height: 300px;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+        
+}
+
+@media(max-width: 768px) {
+    .card-image {
+        max-width: 748px;
+        max-height: 300px;
+    }
+    .card {
+        margin: 0 auto;
+    }
+
+}
+@media(max-width: 425px) {
+    .card-image {
+        max-width: 482px;
+        max-height: 300px;
+    }
+
+}
+
+.image-placeholder {
+    font-size: 2em;
+    color: #ccc;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+/* Button styling */
+.options-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown menu */
+
+.inline-block{
+    display: inline-block;
+    width: 160px;
+    align-items: stretch;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;  /* Aparecerá logo abaixo do botão */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 160px;
+    margin-top: 5px;
+    z-index: 100;
+    text-align: left;
+}
+
+.icon {
+    padding-top: 8px;
+    position: absolute;
+    padding-left: 5px;
+
+
+}
+.dropdown-item {
+    width: 70%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding-left: 18%;
+}
+
+.inline-block:hover {
+    background-color: #f0f0f0;
+}

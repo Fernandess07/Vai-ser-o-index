@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+/* App.css */
+* {
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header styles */
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
+  flex-wrap: wrap; 
 }
 
-.App-link {
-  color: #61dafb;
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; 
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.button {
+  padding: 8px 12px;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1 solid rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Card grid styles */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+}
+
+.no-projects-message {
+  text-align: center;
+  font-size: 40px;
+  color: #888;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+  body {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 30px;
+  
+  }
+
+  .buttons {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    padding: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    width: 482px;
+    margin: auto;
+    padding: 30px;
+  
+  }
+
+  .buttons {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    padding: 10px;
   }
 }
